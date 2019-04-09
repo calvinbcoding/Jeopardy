@@ -1,10 +1,17 @@
-/* html, body, 
-.grid-container { 
+/* /* html, body,  */
+/* .grid-container 
    display: grid;
    grid-column: repeat(3, 1fr);
    grid-row: repeat(3, 100px);
-}
+ */
+html, body,
+.q-box {
+    display: block;
+    padding: 10px;
+    box-align: center;
+    border: Blue;
 
+}
 /* .grid-col { 
  border: 1px solid red;
  position: relative;

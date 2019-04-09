@@ -4,101 +4,118 @@ console.log("Hello");
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
-$('.question').hide();
+// $('.question').hide();
 
 
 $('#html-row-1').click(() => {
     $('#q1r1').toggle();
 })
+$('#html-row-1').click(() => {
 
+})
 
-const questions = [
+const questionArray = [
     {
       topic: 'html',
+      id: 0,
       points: 100,
       question: 'What does HTML stand for?',
       answers: ['hyperlinks and text markup language?', 'hypertext markup language'], 
       correctAnswer: answers[1]
     }, {
       topic: 'HTML',
+      id: 1,
       points: 200,
       question: 'Choose the correct HTML element for the largest heading?',
       answers: ['<head>', '<h6>', '<header>', '<h1>'],
       correctAnswer: answers[3]
     }, {
       topic: 'HTML',
+      id: 2,
       points: 300,
       question: 'What is the correct HTML for making a text input field?',
       answers: ['<input type="textfield">', '<textfield>', '<textinput type="text">', '<input type="text">'],
       correctAnswer: answers[3]
     }, {
       topic:'HTML',
+      id: 3,
       points: 400,
       question: 'The _______ attribute lets us tell the browser to play the audio track continuously until the user stops or pauses it:',
       answers: ['repeat', 'play', 'controls', 'loop'],
       correctAnswer: answers[0]
     }, {  
       topic: 'HTML',
+      id: 4,
       points: 500,
       question: "Consider the following code: <input type='text' patter='/d{1,2}/\d{1,2}/\d{4}>' What information format does this pattern check for?",
       answers: ['Digits', 'Country code', 'Date', 'Price'],
       correctAnswer: answers[?],    
     }, {
       topic: 'CSS',
+      id: 5,
       points: 100,
       question: 'What does the following mean to the computer? div p {color: #ff0000;}',
       answers: ['Make text in all divs and all paragraphs in this document be bright red', 'Make the background in all divs that are of the class "p" be bright red', 'Make the text inside any divs inside of any paragraph be bright red', 'Make the text inside any paragraph that is inside any div be bright red'],
       correctAnswer: answers[3]
     }, {  
       topic: 'CSS',
+      id: 6,
       points: 200,
       question: 'DIVs should only use IDs and spans should only use Classes',
       answers: ['true', 'false'],
       correctAnswer: answers[1]
     }, {
       topic: 'CSS',
+      id: 7,
       points: 300,
       question: 'What is the main difference between a DIV and a SPAN?',
       answers: ['Spans are, by default, inline and DIVs are by default Block', 'DIVs are, by default, inline and SPANs are by default Block', 'There is no real difference', 'Spans can be inside DIVs but DIVs are not supposed to go inside spans', 'Both a and d'],
       correctAnswer: answers[3]
     }, {  
       topic: 'CSS',
+      id: 8,
       points: 400, 
       question: 'How would you select the last item in an unordered list?',
       answers: ['ul li:last-child', 'ul:last-child li', 'ul:last-child(li)'],
       correctAnswer: answers[2]
     }, {
       topic: 'CSS',
+      id: 9,
       points: 500,
       question:
       answers:
       correctAnswer:
     }, {  
       topic: 'JS', 
+      id: 10,
       points: 100,
       question:
       answers: 
       correctAnswer:
     }, {
       topic: 'JS', 
+      id: 11,
       points: 200,
       question:
       answers:
       correctAnswer:
     }, {  
       topic: 'JS', 
+      id: 12,
       points: 300, 
       question:
       answers: 
       correctAnswer:
     }, {
-      topic: 'JS', 
+      topic: 'JS',
+      id: 13, 
       points: 400,
       question:
       answers:
       correctAnswer:
     }, {  
       topic: 'JS', 
+      id: 14,
       points: 500,
       question:
       answers: 
