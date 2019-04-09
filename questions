@@ -1,0 +1,74 @@
+Questions and answers:
+
+HTML:
+100: What does HTML stand for?
+hyperlinks and text markup language?*
+hypertext markup language?
+
+200; Choose the correct HTML element for the largest heading:
+
+<header>
+<h6>
+<head>
+<h1>
+
+300: What is the correct HTML for making a text input field?
+<input type="text">
+<textfield>
+<textinput type="text">
+<input type="text">
+
+4004. The _______ attribute lets us tell the browser to play the audio track continuously until the user stops or pauses it:
+repeatplaycontrolsloop
+
+500.15. Consider the following code:
+<input type="text" patter="/d{1,2}/\d{1,2}/\d{4}">
+What information format does this pattern check for?
+DigitsCountry codeDatePrice
+
+
+CSS:
+100:
+
+What does the following mean to the computer? div p {color: #ff0000;}
+Discuss
+A. 
+Make text in all divs and all paragraphs in this document be bright red
+
+B. 
+Make the background in all divs that are of the class "p" be bright red
+
+C. 
+Make the text inside any divs inside of any paragraph be bright red
+
+D.(correct) 
+Make the text inside any paragraph that is inside any div be bright red
+
+200:
+DIVs should only use ID's and spans should only use Classes
+A. 
+True
+
+B.(corrrect) 
+False
+
+300:
+What is the main difference between a DIV and a SPAN ?
+
+Spans are, by default, inline and DIVs are by default Block
+
+DIVs are, by default, inline and SPANs are by default Block
+
+There is no real difference
+
+Spans can be inside DIVs but DIVs are not supposed to go inside spans
+
+Both a and d
+  
+
+400:How would you select the last item in an unordered list? 
+***ul li:last-child***
+ul:last-child li
+ul:last-child(li)
+
+500:
