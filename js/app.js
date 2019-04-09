@@ -1,7 +1,8 @@
 
-// // 1. Create a grid:
+// // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // //       -6 rows (5 rows for $100-$500, and a header row).
+$('#')
 
 // 2. the header row should have 3 columns: HTML, CSS, JS
 // 3. the columns themselves should be $100-$500 (based on dificulty)
@@ -12,7 +13,7 @@
 //     -row 5 = $400 questions
 //     -row 6 = $500 questions
 // 4. when a player chooses a category and row, clicking on that square should reveal a 
-// question with t/f or multiple choice answers built into the square -(this could also 
+// question with multiple choice answers built into the square -(this could also 
 //     be a prompt), or a new screen entirely
 
 // 5. a second click should reveal either on one of the multiple choice answers or on a t/f 
