@@ -1,8 +1,19 @@
 
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
-// //       -6 rows (5 rows for $100-$500, and a header row).
-$('#')
+// // //-6 rows (5 rows for $100-$500, and a header row).
+// $(document).ready(()=>{
+//     $('.question').hide()
+// })
+
+// $('#html-row-1').click(() => {
+//     $('.question').toggle();
+// })
+const $q1r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
+
+
+
+
 
 // 2. the header row should have 3 columns: HTML, CSS, JS
 // 3. the columns themselves should be $100-$500 (based on dificulty)
