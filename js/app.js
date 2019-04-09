@@ -6,13 +6,19 @@ console.log("Hello");
 // // //-6 rows (5 rows for $100-$500, and a header row).
 // $('.question').hide();
 
+$('#0').click((e) => {
+    $('#q-box').empty();
+    for(let i=0; i <= questionArray.length; i++){
+        if(questionArray[i].id == e.target.id){
+            console.log(questionArray[i])
+            $('#q-box').append(this.question)
 
-$('#html-row-1').click(() => {
-    $('#q1r1').toggle();
-})
-$('#html-row-1').click(() => {
+        }
+    }
+})     
 
-})
+
+
 
 const questionArray = [
     {
@@ -20,131 +26,125 @@ const questionArray = [
       id: 0,
       points: 100,
       question: 'What does HTML stand for?',
-      answers: ['hyperlinks and text markup language?', 'hypertext markup language'], 
-      correctAnswer: answers[1]
+      answers:['hyperlinks and text markup language?', 'hypertext markup language'], 
+      correctAnswer: 1
     }, {
       topic: 'HTML',
       id: 1,
       points: 200,
       question: 'Choose the correct HTML element for the largest heading?',
       answers: ['<head>', '<h6>', '<header>', '<h1>'],
-      correctAnswer: answers[3]
+      correctAnswer: 3
     }, {
       topic: 'HTML',
       id: 2,
       points: 300,
       question: 'What is the correct HTML for making a text input field?',
       answers: ['<input type="textfield">', '<textfield>', '<textinput type="text">', '<input type="text">'],
-      correctAnswer: answers[3]
+      correctAnswer: 3
     }, {
       topic:'HTML',
       id: 3,
       points: 400,
       question: 'The _______ attribute lets us tell the browser to play the audio track continuously until the user stops or pauses it:',
       answers: ['repeat', 'play', 'controls', 'loop'],
-      correctAnswer: answers[0]
+      correctAnswer: 0
     }, {  
       topic: 'HTML',
-      id: 4,
+      id: '4',
       points: 500,
       question: "Consider the following code: <input type='text' patter='/d{1,2}/\d{1,2}/\d{4}>' What information format does this pattern check for?",
       answers: ['Digits', 'Country code', 'Date', 'Price'],
-      correctAnswer: answers[?],    
+      correctAnswer: 1    
     }, {
       topic: 'CSS',
       id: 5,
       points: 100,
       question: 'What does the following mean to the computer? div p {color: #ff0000;}',
       answers: ['Make text in all divs and all paragraphs in this document be bright red', 'Make the background in all divs that are of the class "p" be bright red', 'Make the text inside any divs inside of any paragraph be bright red', 'Make the text inside any paragraph that is inside any div be bright red'],
-      correctAnswer: answers[3]
+      correctAnswer: 3
     }, {  
       topic: 'CSS',
       id: 6,
       points: 200,
       question: 'DIVs should only use IDs and spans should only use Classes',
       answers: ['true', 'false'],
-      correctAnswer: answers[1]
+      correctAnswer: 1
     }, {
       topic: 'CSS',
       id: 7,
       points: 300,
       question: 'What is the main difference between a DIV and a SPAN?',
       answers: ['Spans are, by default, inline and DIVs are by default Block', 'DIVs are, by default, inline and SPANs are by default Block', 'There is no real difference', 'Spans can be inside DIVs but DIVs are not supposed to go inside spans', 'Both a and d'],
-      correctAnswer: answers[3]
+      correctAnswer: 3
     }, {  
       topic: 'CSS',
       id: 8,
       points: 400, 
       question: 'How would you select the last item in an unordered list?',
       answers: ['ul li:last-child', 'ul:last-child li', 'ul:last-child(li)'],
-      correctAnswer: answers[2]
-    }, {
-      topic: 'CSS',
-      id: 9,
-      points: 500,
-      question:
-      answers:
-      correctAnswer:
-    }, {  
-      topic: 'JS', 
-      id: 10,
-      points: 100,
-      question:
-      answers: 
-      correctAnswer:
-    }, {
-      topic: 'JS', 
-      id: 11,
-      points: 200,
-      question:
-      answers:
-      correctAnswer:
-    }, {  
-      topic: 'JS', 
-      id: 12,
-      points: 300, 
-      question:
-      answers: 
-      correctAnswer:
-    }, {
-      topic: 'JS',
-      id: 13, 
-      points: 400,
-      question:
-      answers:
-      correctAnswer:
-    }, {  
-      topic: 'JS', 
-      id: 14,
-      points: 500,
-      question:
-      answers: 
-      correctAnswer:
+      correctAnswer: 2
     }]
+    // , {
+    //   topic: 'CSS',
+    //   id: 9,
+    //   points: 500,
+    //   question:
+    //   answers:
+    //   correctAnswer:
+    // }, {  
+    //   topic: 'JS', 
+    //   id: 10,
+    //   points: 100,
+    //   question:
+    //   answers: 
+    //   correctAnswer:
+    // }, {
+    //   topic: 'JS', 
+    //   id: 11,
+    //   points: 200,
+    //   question:
+    //   answers:
+    //   correctAnswer:
+    // }, {  
+    //   topic: 'JS', 
+    //   id: 12,
+    //   points: 300, 
+    //   question:
+    //   answers: 
+    //   correctAnswer:
+    // }, {
+    //   topic: 'JS',
+    //   id: 13, 
+    //   points: 400,
+    //   question:
+    //   answers:
+    //   correctAnswer:
+    // }, {  
+    //   topic: 'JS', 
+    //   id: 14,
+    //   points: 500,
+    //   question:
+    //   answers: 
+    //   correctAnswer:
+    // }]
     
-    
-    
-    const cardChoices = [
-        {
-          name: "Bulbasaur",
-          damage: 60
-        }, {
-          name: "Caterpie",
-          damage: 40
-        }, {
-          name: "Charmander",
-          damage: 60
-        }, {
-}]
-// const $q1r1 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
-// const $q1r2 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
-// const $q1r3 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
-// const $q1r4 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
-// const $q1r5 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
 
-// const $q2r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
-// const $q1r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
 
+
+
+
+
+
+//for(let 0.questionArray.length)
+// })
+$('#html-row-1').click(() => {
+
+})
+
+
+    
+    
 
 
 

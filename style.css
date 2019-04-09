@@ -8,8 +8,9 @@ html, body,
 .q-box {
     display: block;
     padding: 10px;
+    height: 300px;
     box-align: center;
-    border: Blue;
+    border: 3px solid blue;
 
 }
 /* .grid-col { 
