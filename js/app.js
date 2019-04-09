@@ -1,15 +1,25 @@
 
+console.log("Hello");
+
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
-// $(document).ready(()=>{
-//     $('.question').hide()
-// })
+$('.question').hide();
 
-// $('#html-row-1').click(() => {
-//     $('.question').toggle();
-// })
-const $q1r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
+
+$('#html-row-1').click(() => {
+    $('.question').toggle();
+})
+// const $q1r1 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
+// const $q1r2 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
+// const $q1r3 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
+// const $q1r4 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
+// const $q1r5 = $('<div/>').addClass('html-question').html("question asked for HTML row 1?")
+
+// const $q2r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
+// const $q1r1 = $('<div/>').addClass('question').html("question asked for HTML row 1?")
+
+
 
 
 
