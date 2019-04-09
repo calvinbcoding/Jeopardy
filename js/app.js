@@ -6,12 +6,16 @@ console.log("Hello");
 // // //-6 rows (5 rows for $100-$500, and a header row).
 // $('.question').hide();
 
-$('#0').click((e) => {
-    $('#q-box').empty();
-    for(let i=0; i <= questionArray.length; i++){
-        if(questionArray[i].id == e.target.id){
-            console.log(questionArray[i])
-            $('#q-box').append(this.question)
+$('.bill').click((e) => {
+    console.log(e.target.id);
+    $('.q-box').empty();
+    for(let i=0; i < questionArray.length; i++){
+        const question = questionArray[i];
+        console.log(question.id)
+        console.log(e.target.id)
+        if(question.id == e.target.id){
+            console.log('in if')
+            $('.q-box').append(question.question)
 
         }
     }
@@ -138,9 +142,9 @@ const questionArray = [
 
 //for(let 0.questionArray.length)
 // })
-$('#html-row-1').click(() => {
+// $('#html-row-1').click(() => {
 
-})
+// })
 
 
     
