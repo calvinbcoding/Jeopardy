@@ -33,6 +33,7 @@ const indexCorrAnswer = corrAnswer.correctAnswer;
 console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
         console.log('You are correct!' + "answerChoice = corrAnswer");
+        
     }else{
         console.log('You are incorrect');
     }
@@ -47,6 +48,10 @@ const answerGrabber = (ans) => {
 }
 
 //we need to grab e.target.id
+const playerOne = {
+    points: 0,
+    name: 'Kebert Xela'
+}
 const questionArray = [
     {
       topic: 'html',
