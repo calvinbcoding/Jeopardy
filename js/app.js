@@ -1,6 +1,7 @@
 
 console.log("Hello");
 let currentQuestion;
+
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
@@ -10,12 +11,12 @@ $('.bill').click((e) => {
     $('.q-box').empty();
     $('.a-box').empty();
     for(let i=0; i < questionArray.length; i++){
-        console.log('in the loop');
+        // console.log('in the loop');
         const question = questionArray[i];
         if(question.id == e.target.id){
             currentQuestion = question;
             // corrAnswer = question.answers;
-            console.log(corrAnswer);
+            // console.log(corrAnswer);
             $('.q-box').append(question.question);
             answerGrabber(question.answers);
             // answerChecker(question)
@@ -30,11 +31,14 @@ const answerChoice = $(e.target).text();
 console.log(answerChoice + 'answerChoice');
 // console.log(corrAnswer + 'corrAnswer');
 const indexCorrAnswer = currentQuestion.correctAnswer;
-const corrAnswer = currentQuestion.answers[indexCorrAnswer]
+const corrAnswer = currentQuestion.answers[indexCorrAnswer];
 // console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
         console.log('You are correct!');
         
+        return 'You are correct, yay!'
+        // (playerOneScore + currentQuestion.points) 
+        // console.log(playerOneScore + currentQuestion.points);
     }else{
         console.log('You are incorrect');
     }
