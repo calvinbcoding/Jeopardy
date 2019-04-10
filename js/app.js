@@ -27,12 +27,12 @@ $('.bill').click((e) => {
 console.log($('#answerBox').text())
 $('#answerBox').click((e) =>{
 const answerChoice = $(e.target).text();
-console.log(answerChoice);
-console.log(corrAnswer);
+console.log(answerChoice + 'answerChoice');
+console.log(corrAnswer + 'corrAnswer');
 const indexCorrAnswer = corrAnswer.correctAnswer;
-console.log(corrAnswer.answers[indexCorrAnswer]);
+console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
-        console.log('You are correct!');
+        console.log('You are correct!' + "answerChoice = corrAnswer");
     }else{
         console.log('You are incorrect');
     }
@@ -60,14 +60,14 @@ const questionArray = [
       id: 1,
       points: 200,
       question: 'Choose the correct HTML element for the largest heading?',
-      answers: ['"<head>"', '"<h6>"', '"<header>"', '"<h1>"'],
+      answers: ['head', 'h6', 'header', 'h1'],
       correctAnswer: 3
     }, {
       topic: 'HTML',
       id: 2,
       points: 300,
       question: 'What is the correct HTML for making a text input field?',
-      answers: ['0.<input type="textfield">', ' 1. <textfield>', ' 2.<textinput type="text">', ' 3.<input type="text">'],
+      answers: ['input type="textfield"', 'textfield', 'textinput type="text"', 'input type="text"'],
       correctAnswer: 3
     }, {
       topic:'HTML',
@@ -80,8 +80,8 @@ const questionArray = [
       topic: 'HTML',
       id: '4',
       points: 500,
-      question: "Consider thefollowing code: <input type='text' patter=/d{1,2}/\d{1,2}/\d{4}> What information format does this pattern check for?",
-      answers: ['0.Digits', '1.Country code', '2.Date', '3.Price'],
+      question: "Consider thefollowing code: input type='text' patter=/d{1,2}/\d{1,2}/\d{4} What information format does this pattern check for?",
+      answers: ['Digits', 'Country code', 'Date', 'Price'],
       correctAnswer: 1    
     }, {
       topic: 'CSS',
@@ -111,50 +111,49 @@ const questionArray = [
       question: 'How would you select the last item in an unordered list?',
       answers: ['ul li:last-child', 'ul:last-child li', 'ul:last-child(li)'],
       correctAnswer: 2
+    }, {
+      topic: 'CSS',
+      id: 9,
+      points: 500,
+      question: 'Which is a correct way to add a class using jQuery?',
+      answers: ['addEventListenter()', 'addClass()', 'addCSS()', 'addHTML'],
+      correctAnswer: 1
+    }, {  
+      topic: 'JS', 
+      id: 10,
+      points: 100,
+      question:  'Which is the correct way to write a JavaScript array?',
+      answers:['var txt = new Array(1:"tim",2:"kim",3:"jim")', 'var txt = new Array:1=("tim")2=("kim")3=("jim")', 'var txt = new Array("tim","kim","jim")', 'var txt = new Array="tim","kim","jim"'], 
+      correctAnswer: 2
+    }, {
+      topic: 'JS', 
+      id: 11,
+      points: 200,
+      question: 'Which of the following best describes JavaScript?',
+      answers: ['a low-level programming language.', 'a scripting language precompiled in the browser.', 'a compiled scripting language.', 'an object-oriented scripting language.'],
+      correctAnswer: 3
+    }, {  
+      topic: 'JS', 
+      id: 12,
+      points: 300, 
+      question: 'Which of the following is not considered a JavaScript operator?',
+      answers: ['new', 'this', 'delete', 'typeof'],
+      correctAnswer: 1
+    }, {
+      topic: 'JS',
+      id: 13, 
+      points: 400,
+      question: 'The syntax of Eval is ________________.',
+      answers: ['[objectName.]eval(numeric),', '[objectName.]eval(string)', '[EvalName.]eval(string)'],
+      correctAnswer: 1
+    }, {  
+      topic: 'JS', 
+      id: 14,
+      points: 500,
+      question: ' _________ is a wrapped Java array, accessed from within JavaScript code.',
+      answers: ['JavaArray', 'JavaObject', 'JavaClass', 'JavaPackage'],
+      correctAnswer: 2
     }]
-    // , {
-    //   topic: 'CSS',
-    //   id: 9,
-    //   points: 500,
-    //   question:
-    //   answers:
-    //   correctAnswer:
-    // }, {  
-    //   topic: 'JS', 
-    //   id: 10,
-    //   points: 100,
-    //   question:
-    //   answers: 
-    //   correctAnswer:
-    // }, {
-    //   topic: 'JS', 
-    //   id: 11,
-    //   points: 200,
-    //   question:
-    //   answers:
-    //   correctAnswer:
-    // }, {  
-    //   topic: 'JS', 
-    //   id: 12,
-    //   points: 300, 
-    //   question:
-    //   answers: 
-    //   correctAnswer:
-    // }, {
-    //   topic: 'JS',
-    //   id: 13, 
-    //   points: 400,
-    //   question:
-    //   answers:
-    //   correctAnswer:
-    // }, {  
-    //   topic: 'JS', 
-    //   id: 14,
-    //   points: 500,
-    //   question:
-    //   answers: 
-    //   correctAnswer:
-    // }]
     
 
 

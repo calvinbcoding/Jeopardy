@@ -6,21 +6,38 @@
  */
 html
 body
+.jeopardy{
+    align-content: center;
+
+}
+.numContainer{
+    display: block;
+    box-align: center;
+    font-size: 20px;
+    text-emphasis-color: red;
+    text-emphasis: all;
+    margin-block-start: center;
+
+    /* margin-block-start: 30px; */
+    /* padding-left: 100px; */
+}
 .q-box {
-    display: inline-block;
+    display: block;
     padding: 10px;
-    height: 100px;
+    height: 200px;
     width: 400px;
-    box-align: right;
+    box-align: center;
     border: 3px solid blue;
+      
+    
 
 }
 .a-box {
     display: inline-block;
     padding: 10px;
-    height: 100px;
+    height: 200px;
     width: 400px;
-    box-align: right;
+    box-align: center;
     border: 3px solid green;
 }
  
