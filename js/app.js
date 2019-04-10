@@ -5,25 +5,48 @@ console.log("Hello");
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
 // $('.question').hide();
-
+let corrAnswer;
 $('.bill').click((e) => {
-    console.log(e.target.id);
     $('.q-box').empty();
+    $('.a-box').empty();
     for(let i=0; i < questionArray.length; i++){
+        console.log('in the loop');
         const question = questionArray[i];
-        console.log(question.id)
-        console.log(e.target.id)
         if(question.id == e.target.id){
-            console.log('in if')
-            $('.q-box').append(question.question)
-
+            corrAnswer = question;
+            console.log(corrAnswer);
+            $('.q-box').append(question.question);
+            answerGrabber(question.answers);
         }
     }
-})     
+})   
+//corrAnswer.answer
+//corrAnswer = question object
+//corrAnswer.answer at index corrAnswer.correctAnswer
 
+console.log($('#answerBox').text())
+$('#answerBox').click((e) =>{
+const answerChoice = $(e.target).text();
+console.log(answerChoice);
+console.log(corrAnswer);
+const indexCorrAnswer = corrAnswer.correctAnswer;
+console.log(corrAnswer.answers[indexCorrAnswer]);
+    if(answerChoice === corrAnswer){
+        console.log('You are correct!');
+    }else{
+        console.log('You are incorrect');
+    }
+})
+const answerGrabber = (ans) => {
+    for(i=0; i<ans.length; i++){
+        console.log(ans[i]);
+        const string = `<div id=ans-${i}>${ans[i]}</div>`;
+        console.log(string);
+        $('.a-box').append(string)
+    }
+}
 
-
-
+//we need to grab e.target.id
 const questionArray = [
     {
       topic: 'html',
@@ -37,14 +60,14 @@ const questionArray = [
       id: 1,
       points: 200,
       question: 'Choose the correct HTML element for the largest heading?',
-      answers: ['<head>', '<h6>', '<header>', '<h1>'],
+      answers: ['"<head>"', '"<h6>"', '"<header>"', '"<h1>"'],
       correctAnswer: 3
     }, {
       topic: 'HTML',
       id: 2,
       points: 300,
       question: 'What is the correct HTML for making a text input field?',
-      answers: ['<input type="textfield">', '<textfield>', '<textinput type="text">', '<input type="text">'],
+      answers: ['0.<input type="textfield">', ' 1. <textfield>', ' 2.<textinput type="text">', ' 3.<input type="text">'],
       correctAnswer: 3
     }, {
       topic:'HTML',
@@ -57,8 +80,8 @@ const questionArray = [
       topic: 'HTML',
       id: '4',
       points: 500,
-      question: "Consider the following code: <input type='text' patter='/d{1,2}/\d{1,2}/\d{4}>' What information format does this pattern check for?",
-      answers: ['Digits', 'Country code', 'Date', 'Price'],
+      question: "Consider thefollowing code: <input type='text' patter=/d{1,2}/\d{1,2}/\d{4}> What information format does this pattern check for?",
+      answers: ['0.Digits', '1.Country code', '2.Date', '3.Price'],
       correctAnswer: 1    
     }, {
       topic: 'CSS',
