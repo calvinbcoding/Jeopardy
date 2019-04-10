@@ -1,6 +1,6 @@
 
 console.log("Hello");
-
+let currentQuestion;
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
@@ -13,25 +13,24 @@ $('.bill').click((e) => {
         console.log('in the loop');
         const question = questionArray[i];
         if(question.id == e.target.id){
+            currentQuestion = question;
             // corrAnswer = question.answers;
             console.log(corrAnswer);
             $('.q-box').append(question.question);
             answerGrabber(question.answers);
-            answerChecker(question)
+            // answerChecker(question)
         }
     }
 })   
 //corrAnswer.answer
 //corrAnswer = question object
 //corrAnswer.answer at index corrAnswer.correctAnswer
-const answerChecker = (question) => {
-console.log($('#answerBox').text())
 $('#answerBox').click((e) =>{
 const answerChoice = $(e.target).text();
-// console.log(answerChoice + 'answerChoice');
+console.log(answerChoice + 'answerChoice');
 // console.log(corrAnswer + 'corrAnswer');
-const indexCorrAnswer = question.correctAnswer;
-const corrAnswer = question.answers[indexCorrAnswer]
+const indexCorrAnswer = currentQuestion.correctAnswer;
+const corrAnswer = currentQuestion.answers[indexCorrAnswer]
 // console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
         console.log('You are correct!');
@@ -40,7 +39,7 @@ const corrAnswer = question.answers[indexCorrAnswer]
         console.log('You are incorrect');
     }
 })
-}
+
 const answerGrabber = (ans) => {
     for(i=0; i<ans.length; i++){
         console.log(ans[i]);
