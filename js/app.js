@@ -13,31 +13,34 @@ $('.bill').click((e) => {
         console.log('in the loop');
         const question = questionArray[i];
         if(question.id == e.target.id){
-            corrAnswer = question;
+            // corrAnswer = question.answers;
             console.log(corrAnswer);
             $('.q-box').append(question.question);
             answerGrabber(question.answers);
+            answerChecker(question)
         }
     }
 })   
 //corrAnswer.answer
 //corrAnswer = question object
 //corrAnswer.answer at index corrAnswer.correctAnswer
-
+const answerChecker = (question) => {
 console.log($('#answerBox').text())
 $('#answerBox').click((e) =>{
 const answerChoice = $(e.target).text();
-console.log(answerChoice + 'answerChoice');
-console.log(corrAnswer + 'corrAnswer');
-const indexCorrAnswer = corrAnswer.correctAnswer;
-console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
+// console.log(answerChoice + 'answerChoice');
+// console.log(corrAnswer + 'corrAnswer');
+const indexCorrAnswer = question.correctAnswer;
+const corrAnswer = question.answers[indexCorrAnswer]
+// console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
-        console.log('You are correct!' + "answerChoice = corrAnswer");
+        console.log('You are correct!');
         
     }else{
         console.log('You are incorrect');
     }
 })
+}
 const answerGrabber = (ans) => {
     for(i=0; i<ans.length; i++){
         console.log(ans[i]);
