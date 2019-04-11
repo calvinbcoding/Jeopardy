@@ -1,7 +1,8 @@
 
 console.log("Hello");
 let currentQuestion;
-
+let  playerOneScore = 0;
+console.log(playerOneScore);
 // // 1. Create a grid:check!!!!
 // //  with -three columns and 
 // // //-6 rows (5 rows for $100-$500, and a header row).
@@ -35,15 +36,18 @@ const corrAnswer = currentQuestion.answers[indexCorrAnswer];
 // console.log(corrAnswer.answers[indexCorrAnswer] + 'corrAnswer.answers[indexCorrAnswer]');
     if(answerChoice === corrAnswer){
         console.log('You are correct!');
+        playerOneScore += currentQuestion.points
         
-        return 'You are correct, yay!'
         // (playerOneScore + currentQuestion.points) 
         // console.log(playerOneScore + currentQuestion.points);
     }else{
         console.log('You are incorrect');
+        playerOneScore -= currentQuestion.points
     }
+    return playerOneScore;
 })
 
+$('#playerScore').append(playerOneScore);
 const answerGrabber = (ans) => {
     for(i=0; i<ans.length; i++){
         console.log(ans[i]);
@@ -54,10 +58,10 @@ const answerGrabber = (ans) => {
 }
 
 //we need to grab e.target.id
-const playerOne = {
-    points: 0,
-    name: 'Kebert Xela'
-}
+// const playerOne = {
+//     points: 0,
+//     name: 'Kebert Xela'
+// }
 const questionArray = [
     {
       topic: 'html',

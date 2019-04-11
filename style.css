@@ -23,24 +23,29 @@ body
 }
 .q-box {
     display: block;
-    padding: 10px;
-    height: 200px;
-    width: 400px;
+    padding: 15px;
+    height: fit-content;
+    width: auto;
     box-align: center;
     border: 3px solid blue;
-      
-    
-
 }
 .a-box {
-    display: inline-block;
-    padding: 10px;
-    height: 200px;
-    width: 400px;
-    box-align: center;
+    display: block;
+    padding: 15px;
+    height: inherit;
+    width: auto;
     border: 3px solid green;
 }
- 
+.playerScore {
+    display: block;
+    padding: 15px;
+    height: fit-content;
+    width: 200px;
+    box-align: left;
+    border: 5px solid springgreen;
+    margin: auto;
+    
+} 
 /* .grid-col { 
  border: 1px solid red;
  position: relative;
